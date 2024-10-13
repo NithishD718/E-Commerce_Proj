@@ -26,7 +26,7 @@ public class Inventory {
        boolean changeCategory;
        InventoryManager manager = getManager(account.getSupplyProductCategory());
        do {
-           System.out.println("Please choose the category of product you want to manage");
+           System.out.println("Please choose the category of product you want to manage (Enter the category Number)");
            if (account.getSupplyProductCategory().equals(ProductCategories.ProductCatgory.Electronics.name())) {
                manager.viewCategory(ElectronicCategories.ElectronicsCategory.class);
                int categoryId = scan.nextInt();

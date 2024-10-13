@@ -8,6 +8,7 @@ import PurchaseModel.PurchaseManager;
 import Util.ExceptionUtil.ProductException;
 import Util.GlobalScanner;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -103,7 +104,9 @@ public class ElectronicsManager extends InventoryManager<ElectronicsManager> {
 
     @Override
     public <E extends Enum<E>> void viewCategory(Class<E> categorylist) {
-         super.viewCategory(categorylist);
+        E[] enumConstants = categorylist.getEnumConstants();
+        Arrays.stream(enumConstants).forEach(val -> System.out.print(val + " || "));
+        // super.viewCategory(categorylist);
     }
 
 }

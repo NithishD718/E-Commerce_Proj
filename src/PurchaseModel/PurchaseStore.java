@@ -35,7 +35,7 @@ public class PurchaseStore {
     }
 
     public static void startPurchase(String globalCategory) {
-        System.out.println("Choose the category of product you want to purchase");
+        System.out.println("Choose the category of product you want to purchase (Enter the category Number)");
        InventoryManager manager =  Inventory.getManager(globalCategory);
        if(globalCategory.equalsIgnoreCase(ProductCategories.ProductCatgory.Electronics.name())) {
            manager.viewCategory(ElectronicCategories.ElectronicsCategory.class);
